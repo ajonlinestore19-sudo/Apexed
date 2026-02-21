@@ -6,6 +6,7 @@ import Problem from "./components/Problem"
 import Process from "./components/Process"
 import Services from "./components/Services"
 import Packages from "./components/Packages"
+import FAQ from "./components/FAQ"
 
 export default function Home() {
     return (
@@ -18,6 +19,7 @@ export default function Home() {
             <Process />
             <Services />
             <Packages />
+            <FAQ />
         </main>
     )
 }
