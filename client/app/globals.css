@@ -160,9 +160,17 @@
   background: linear-gradient(to bottom, #121212 10%, #1e1e1e78 20%, #1e1e1e 100%);
 }
 
+.packages-container {
+  background: linear-gradient(to bottom, #121212 10%, #1212127a 50%, #12121222 100%);
+}
+
 .cta-button {
   background:
     linear-gradient(to bottom, #ff5722 0%, #ff56227c 90%, #f5f5f770 100%);
+}
+
+.accordion-open {
+  background: linear-gradient(90deg, #121212 0%, #1e1e1e 70%, #f5f5f74f 100%);
 }
 
 .glass-navbar::before {
@@ -237,7 +245,6 @@
     linear-gradient(to right, #FF5722 0%, #a3a5a6 50%, #FF5722 100%) border-box;
 }
 
-
 .bg-brand-opaque-orange {
   background-color: #ff562224;
 }
@@ -255,7 +262,6 @@ body {
   background-color: black;
   background-image: url("/assets/website-glitter-bg.svg");
 }
-
 
 .urbanist {
   font-family: "Urbanist", sans-serif;
