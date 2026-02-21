@@ -9,3 +9,10 @@ export interface Package {
     type: string,
     content: string,
 }
+
+export interface QnAComponent {
+    qna_id: number,
+    question: string,
+    answer: string,
+    opened: boolean,
+}
