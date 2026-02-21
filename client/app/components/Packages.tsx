@@ -36,7 +36,7 @@ export default function Packages() {
                 
             <div className="flex flex-col md:flex-row justify-center gap-y-5 m-[1em] md:gap-x-[15px] text-start z-20">
 
-                <div className="py-3 px-[2vw] md:w-[395px] bg-[#121212] border border-[#1e1e1e] rounded-lg">
+                <div className="py-1 px-[1vw] md:w-[395px] bg-[#121212] border border-[#1e1e1e] rounded-lg">
                     <p className="text-gradient-orange rounded-lg inline-block px-5 font-medium text-center text-lg p-2 border border-[#1e1e1e] my-3">Basic</p>
                     <span>
                         {!yearly ? 
@@ -50,7 +50,7 @@ export default function Packages() {
                             Get Started
                         </button>
                     </div>
-                    <span>
+                    <span className="flex flex-col p-4 my-6 packages-container border border-[#1e1e1e] rounded-lg">
                         <h3 className="text-white text-lg font-medium py-3">What's included:</h3>
                         {packages.filter((item) => item.type === "basic").map((item) => (
                             <span key={item.package_id} className="text-[#929292] py-3 text-wrap flex flex-row whitespace-pre-line">
@@ -62,7 +62,7 @@ export default function Packages() {
                         ))}
                     </span>
                 </div>
-                <div className="relative py-3 px-[2vw] md:w-[395px] bg-[#121212] border border-[#1e1e1e] rounded-lg">
+                <div className="relative py-1 px-[1vw] md:w-[395px] bg-[#121212] border border-[#1e1e1e] rounded-lg">
                     <p className="text-gradient-orange rounded-lg inline-block px-5 font-medium text-center text-lg p-2 border border-[#1e1e1e] my-3">Standard</p>
                     <span>
                         <Image src="/assets/light-ray.svg" className="absolute rounded-lg top-0 right-0" alt="light-ray-effect" width={250} height={250} />
@@ -77,7 +77,7 @@ export default function Packages() {
                             Get Started
                         </button>
                     </div>
-                    <span className="flex flex-col">
+                    <span className="flex flex-col p-4 my-6 packages-container border border-[#1e1e1e] rounded-lg">
                         <h3 className="text-white text-lg font-medium py-3">What's included:</h3>
                         {packages.filter((item) => item.type === "standard").map((item) => (
                             <span key={item.package_id} className="text-[#929292] py-3 text-wrap flex flex-row">
@@ -89,7 +89,7 @@ export default function Packages() {
                         ))}
                     </span>
                 </div>
-                <div className="py-3 px-[2vw] md:w-[395px] bg-[#121212] border border-[#1e1e1e] rounded-lg">
+                <div className="py-1 px-[1vw] md:w-[395px] bg-[#121212] border border-[#1e1e1e] rounded-lg">
                     <p className="text-gradient-orange rounded-lg inline-block px-5 font-medium text-center text-lg p-2 border border-[#1e1e1e] my-3">Enterprise</p>
                     <span>
                         {!yearly ? 
@@ -103,7 +103,7 @@ export default function Packages() {
                             Get Started
                         </button>
                     </div>
-                    <span>
+                    <span className="flex flex-col p-4 my-6 packages-container border border-[#1e1e1e] rounded-lg">
                         <h3 className="text-white text-lg font-medium py-3">What's included:</h3>
                         {packages.filter((item) => item.type === "enterprise").map((item) => (
                             <span key={item.package_id} className="text-[#929292] py-3 text-wrap flex flex-row">
