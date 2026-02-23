@@ -23,14 +23,14 @@ export default function Packages() {
                         After choosing a service category, select how many workflows you want automated.
                     </p>
                 </span>
-                <span className="glass-button inline-block justify-center py-2 text-center border border-[#1e1e1e] rounded-full"
+                <span className="glass-button inline-block justify-center py-2 text-center border border-[#1e1e1e] rounded-full cursor-pointer"
                 onClick={() => toggleYearly(!yearly)}>
                     <button className={!yearly ? 
-                    `text-white text-sm py-3 px-4 rounded-full mx-2 bg-[#121212] border border-[#1e1e1e]` :
-                    `text-white text-sm py-3 px-4 mx-2 rounded-full`}>Monthly</button>
+                    `text-white text-sm py-3 px-4 rounded-full mx-2 bg-[#121212] border border-[#1e1e1e] cursor-pointer` :
+                    `text-white text-sm py-3 px-4 mx-2 rounded-full cursor-pointer`}>Monthly</button>
                     <button className={yearly ? 
-                    `text-white text-sm py-3 px-4 rounded-full mx-2 bg-[#121212] border border-[#1e1e1e]` :
-                    `text-white text-sm py-3 px-4 mx-2 rounded-full`}>Yearly</button>
+                    `text-white text-sm py-3 px-4 rounded-full mx-2 bg-[#121212] border border-[#1e1e1e] cursor-pointer` :
+                    `text-white text-sm py-3 px-4 mx-2 rounded-full cursor-pointer`}>Yearly</button>
                 </span>
             </div>
                 
