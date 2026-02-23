@@ -35,7 +35,7 @@ export default function FAQ() {
                     </p>
                 </span>
             </div>
-            <div className="flex flex-col gap-y-6">
+            <div className="flex flex-col gap-y-3">
                 {
                     questionsList.map((question) => (
                         <div className={question.opened ? 
