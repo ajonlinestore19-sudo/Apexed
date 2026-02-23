@@ -7,6 +7,8 @@ import Process from "./components/Process"
 import Services from "./components/Services"
 import Packages from "./components/Packages"
 import FAQ from "./components/FAQ"
+import Team from "./components/Team"
+import Footer from "./components/Footer"
 
 export default function Home() {
     return (
@@ -20,6 +22,8 @@ export default function Home() {
             <Services />
             <Packages />
             <FAQ />
+            <Team />
+            <Footer />
         </main>
     )
 }
