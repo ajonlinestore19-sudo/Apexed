@@ -11,7 +11,7 @@ export default function Footer() {
                 </span>
                 <span className="flex flex-col py-3">
                     <p className="text-sm text-[#929292]">
-                        Stay ahead with Automation Insights get the latest AI Automation
+                        Stay ahead with Automation Insights get the latest AI
                         automation trends and smart solutions delivered straight to your inbox
                     </p>
                 </span>
