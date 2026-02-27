@@ -29,18 +29,18 @@ export default function Header() {
             </div>
             <div className="flex flex-col my-5">
                 <section className="flex flex-row">
-                    <Image src="/assets/images/sky.webp" alt="sky" width={50} height={50} className="border-2 
-                    border-white rounded-full mx-[-5px]" />
-                    <Image src="/assets/images/dave.webp" alt="dave" width={50} height={50} className="border-2 
-                    border-white rounded-full mx-[-5px]" />
-                    <Image src="/assets/images/ajay.webp" alt="ajay" width={50} height={50} className="border-2 
-                    border-white rounded-full mx-[-5px]" />
-                    <Image src="/assets/images/sjay.webp" alt="sjay" width={50} height={50} className="border-2 
-                    border-white rounded-full mx-[-5px]" />
-                    <Image src="/assets/images/lance.webp" alt="lance" width={50} height={50} className="border-2 
-                    border-white rounded-full mx-[-5px]" />
-                    <Image src="/assets/images/tim.webp" alt="tim" width={50} height={50} className="border-2 
-                    border-white rounded-full mx-[-5px]" />
+                    <Image src="/assets/images/skyrone-icon.svg" alt="sky" width={50} height={50} className=" 
+                    rounded-full mx-[-5px]" />
+                    <Image src="/assets/images/tim-icon.svg" alt="tim" width={50} height={50} className=" 
+                    rounded-full mx-[-5px]" />
+                    <Image src="/assets/images/ajay-icon.svg" alt="ajay" width={50} height={50} className=" 
+                    rounded-full mx-[-5px]" />
+                    <Image src="/assets/images/sjay-icon.svg" alt="sjay" width={50} height={50} className=" 
+                    rounded-full mx-[-5px]" />
+                    <Image src="/assets/images/lance-icon.svg" alt="lance" width={50} height={50} className=" 
+                    rounded-full mx-[-5px]" />
+                    <Image src="/assets/images/dave-icon.svg" alt="dave" width={50} height={50} className=" 
+                    rounded-full mx-[-5px]" />
                 </section>
                 <span>
                     <p className="text-white my-5 text-center">Helping startups build better</p>
