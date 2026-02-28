@@ -1,7 +1,46 @@
 "use client"
 import Image from "next/image"
+import { useForm, SubmitHandler } from "react-hook-form"
+import Link from "next/link"
+
+interface EmailForm {
+    email: string,
+}
 
 export default function Footer() {
+
+    const { register, handleSubmit, formState: { errors } } = useForm<EmailForm>();
+
+    const submitEmail: SubmitHandler<EmailForm> = async (data) => {
+
+        if (!data) {
+            console.log("ERROR: No user input");
+            return;
+        }
+
+        try {
+            const response = await fetch("/api/send-emailopt", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email: data.email,
+                })
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                console.log("ERROR: ", result.error);
+            }
+
+            console.log("Email sent successfully!", result);
+        } catch (error) {
+            console.log("Something went wrong: ", error);
+        }
+    }
+
     return (
         <>
         <section className="md:grid md:grid-cols-[2fr_1fr_1fr_1fr] gap-5 text-start urbanist">
@@ -16,9 +55,12 @@ export default function Footer() {
                     </p>
                 </span>
                 <span className="relative flex flex-col py-3">
-                    <form className="flex flex-row">
+                    <form className="flex flex-row" onSubmit={handleSubmit(submitEmail)}>
                         <input className="md:w-[25vw] w-full px-5 py-3 bg-[#1e1e1e] border border-[#5b5b5b] rounded-full text-[#929292]" 
-                        type="text" name="email" id="email-input" placeholder="Your Email" />
+                        type="text" id="email-input" placeholder="Your Email"
+                        {...register("email", {
+                            required: "Your email is required!",
+                        })} />
                         <button className="absolute z-10 bottom-4 right-1 p-2 rounded-full bg-[#c64811] cursor-pointer">
                             <Image src="/assets/arrow-icon.svg" alt="submit-icon" width={25} height={25} />
                         </button>
@@ -27,10 +69,10 @@ export default function Footer() {
             </div>
             <div className="flex flex-col px-6 py-3 gap-y-1">
                 <p className="text-[#929292] text-sm py-3">/NAVIGATION</p>
-                <a className="text-sm text-white no-underline" href="#">Home</a>
+                <Link href="/"><span className="text-sm text-white no-underline">Home</span></Link>
                 <a className="text-sm text-white no-underline" href="#">Services</a>
                 <a className="text-sm text-white no-underline" href="#">About</a>
-                <a className="text-sm text-white no-underline" href="#">Contact Us</a>
+                <Link href="/contact"><span className="text-sm text-white no-underline">Contact Us</span></Link>
             </div>
             <div className="flex flex-col px-6 py-3 gap-y-1">
                 <p className="text-[#929292] text-sm py-3">/RESOURCES</p>

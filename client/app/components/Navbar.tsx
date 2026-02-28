@@ -2,8 +2,12 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 function Navbar() {
+
+  const router = useRouter();
 
   const [menu, toggleMenu] = useState<boolean>(true);
 
@@ -22,14 +26,14 @@ function Navbar() {
             <div className="text-xl font-bold text-brand-orange">
               <Image src="/assets/images/apexed-logo.webp" width={70} height={70} alt="apexed-logo" />
             </div>
-            <span>Home</span>
+            <Link href="/"><span>Home</span></Link>
             <span>Services</span>
             <span>About</span>
           </nav>
             <section className="flex justify-between items-center gap-8 text-sm">
               <Image className="md:hidden" src="/assets/images/apexed-logo.webp" width={70} height={70} alt="apexed-logo" />
               <button className="hidden md:flex glass-button rounded-lg px-6 py-3 text-white
-              hover-bg-brand-orange transition ms-[3em]">
+              hover-bg-brand-orange transition ms-[3em] cursor-pointer" onClick={() => router.push("../contact")}>
               Contact Us
               </button>
               <button className="md:hidden ms-[8em]" onClick={() => toggleMenu(!menu)}>
